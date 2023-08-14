@@ -6,9 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{appTitle}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
 
   <body>
+    <header class="header">
+      <div class = 'auth'>
+        <nav>
+          <a href="/signup">Signup</a>
+          <a href="/login">Login</a>
+          <br>
+          <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+          </form>
+        </nav>
+      </div>
+      <div class="title">
+        <h3>
+          <a href="/">EcoLux Couture</a>
+        </h3>
+      </div>
+      <div>
+        <nav>
+          <ul class="menu-class">
+            <li>About</li>
+            <li>
+              <a href="/brands">Brands</a>
+            </li>
+            <li>Clothing Categories
+              <ul class="submenu-class">
+                <li>Women</li>
+                <li>Men</li>
+              </ul>
+            </li>
+            <li>Discover more</li>
+            <li>Get involved</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     {{{body}}}
 

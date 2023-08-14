@@ -1,0 +1,25 @@
+<div>
+    <h2>New Brand entry</h2>
+    <div id="brands-create">
+        <form action="/brands/create" method="post">
+        <label>Image:
+          <input type="file" name="brand-logo-image" class="form-control-file" />
+        </label>
+        <label> Title:
+            <input type="text" name="title" />
+        </label>
+        
+        <label> Eco-Rating:
+            <input type="number" name="ecoRating" step="any"/>
+        </label>
+        
+        <label> Description:
+            <textarea name="description" cols="30" rows="4"> </textarea>
+        </label>
+        
+        <button type="submit"> Save new entry </button>
+        </form>
+    </div>
+    <a href="/brands">Brands List</a>
+    <a href="/">Home Page</a>
+</div>

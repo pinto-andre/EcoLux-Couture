@@ -3,10 +3,46 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00b7ff;
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h1 {
-  color: 15px;
+.menu-class{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 650px;
+  padding: 0;
+
+}
+
+.menu-class li{
+  list-style-type: none;
+}
+
+.submenu-class{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.submenu-class li{
+  list-style-type: none;
+}
+
+.auth{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.auth nav{
+  display: flex;
+  flex-direction: row;
+  width: 225px;
+  justify-content: space-between;
 }
