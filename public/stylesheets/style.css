@@ -1,5 +1,7 @@
 body {
-  padding: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -10,33 +12,52 @@ body {
   flex-direction: column;
 }
 
-.menu-class{
+.title{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.navbar-div{
+  margin-top: 0;
+  padding-top: 0;
+  width: 675px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 650px;
-  padding: 0;
-
+  justify-content: center;
 }
 
-.menu-class li{
-  list-style-type: none;
-}
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+      display: none;
+      position: absolute; /* Position the dropdown absolutely */
+      top: 100%; /* Position the dropdown below the parent item */
+      left: 0; /* Align the dropdown with the parent item */
+      width: 100%; /* Make the dropdown full-width */
+      text-align: center; /* Center-align the items */
+  }
 
-.submenu-class{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 0;
-}
+  .navbar .nav-item:hover .nav-link { /* No need to change this line */
+  }
 
-.submenu-class li{
-  list-style-type: none;
+  .navbar .nav-item:hover .dropdown-menu {
+      display: block;
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .navbar .nav-item .dropdown-menu li {
+      display: inline-block; /* Display submenu items horizontally */
+      margin: 0;
+      padding: 0;
+  }
 }
 
 .auth{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
 }
 
@@ -45,4 +66,5 @@ body {
   flex-direction: row;
   width: 225px;
   justify-content: space-between;
+  align-items: center;
 }

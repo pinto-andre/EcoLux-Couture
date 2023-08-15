@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{appTitle}}</title>
+    <style>
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
 
   <body>
+    <video autoplay loop muted>
+        <source src="/videos/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <header class="header">
       <div class = 'auth'>
         <nav>
@@ -27,24 +42,26 @@
           <a href="/">EcoLux Couture</a>
         </h3>
       </div>
-      <div>
-        <nav>
-          <ul class="menu-class">
-            <li>About</li>
-            <li>
-              <a href="/brands">Brands</a>
-            </li>
-            <li>
-              <a href="/clothing">Clothing Categories</a>
-              <ul class="submenu-class">
-                <li>Women</li>
-                <li>Men</li>
+      <div class = "navbar-div">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="main_nav">
+              <ul class="navbar-nav">
+                <li class="nav-item active"> <a class="nav-link" href="/about">About </a> </li>
+                <li class="nav-item"><a class="nav-link" href="/brands"> Brands </a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link  dropdown-toggle" href="/clothing" data-bs-toggle="dropdown">  Clothing Categories  </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item nav-link" href="#"> Men </a></li>
+                    <li><a class="dropdown-item nav-link" href="#"> Women </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link nav-link" href="#"> Discover More </a></li> 
+                <li class="nav-item"><a class="nav-link nav-link" href="#"> Get involved </a></li> 
+                <li class="nav-item"><a class="nav-link nav-link" href="#"> Contact </a></li> 
               </ul>
-            </li>
-            <li>Discover more</li>
-            <li>Get involved</li>
-            <li>Contact</li>
-          </ul>
+            </div> <!-- .navbar-collapse-->
+          </div> <!-- .container-fluid -->
         </nav>
       </div>
     </header>
@@ -52,6 +69,9 @@
     {{{body}}}
 
     <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
   </body>
 
 </html>

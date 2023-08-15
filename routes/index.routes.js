@@ -6,9 +6,13 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-const Brand = require("../models/Brand.model");
-const ClothingType = require("../models/ClothingType.model");
-const User = require('../models/User.model')
+/* GET about page */
+router.get("/about", (req, res, next) => {
+  res.render("about");
+});
+
+
+
 
 
 
