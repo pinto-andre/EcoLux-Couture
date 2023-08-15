@@ -22,7 +22,7 @@ const brand = [
       console.log('Database is now connected');
   
       // Create Brands in our database with the seeds array
-      let brandCreated = await Brands.create(brand);
+      let brandCreated = await Brands.create(brand[0]);
   
       // Feedback about Brands creation
       console.log(`Created ${brandCreated.length} brands!`);
