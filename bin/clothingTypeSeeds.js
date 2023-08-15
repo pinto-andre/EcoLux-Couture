@@ -3,7 +3,7 @@ const clothingType = require('../models/ClothingType.model')
 
 const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://andrepinto:YGa6d8RLPU3BTk7F@cluster0.u1ktoop.mongodb.net/ecolux"
 
-const clothingType = [
+const clothing = [
     {
     image: ['https://saint-laurent.dam.kering.com/m/68d42cdf83a96383/Large-740962Y7F931000_A.jpg?v=1', 'https://saint-laurent.dam.kering.com/m/33721d8758b7ecfb/Large-740962Y7F931000_Y.jpg?v=1'],
     name: 'Glove Dress in Crepe Jersey',
@@ -33,10 +33,10 @@ const clothingType = [
       console.log('Database is now connected');
   
       // Create Brands in our database with the seeds array
-      let clothingTypeCreated = await clothingType.create(brands);
-  
-      // Feedback about Culture Spots creation
-      console.log(`Created ${clothingTypeCreated.length} clothing types!`);
+      for(let i = 0; i < clothing.length; i++){
+        await clothingType.create(clothing[i]);
+      }
+      
   
       // Close the connection
       await mongoose.connection.close();

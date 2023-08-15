@@ -1,31 +1,38 @@
 const { Schema, model } = require("mongoose");
 
 const brandSchema = new Schema(
-    {
-    image: {
-        type: String
+  {
+  image: {
+      type: String
+  },
+  title: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+  },
+  ecoRating: {
+      type: Number,
+      required: false,
     },
-    title: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
+  description: {
+      type: String,
+      required: true,
     },
-    ecoRating: {
-        type: Number,
-        required: false,
-      },
-    description: {
-        type: String,
-        required: true,
-      },
-    clothes: [String]
+  link: {
+      type: String,
     },
-    {
-      // this second object adds extra properties: `createdAt` and `updatedAt`
-      timestamps: true,
+  clothes: [
+    { 
+      type: Schema.Types.ObjectId,
+      ref: 'ClothingType'
     }
-  );
+  ]},
+  {
+    // this second object adds extra properties: `createdAt` and `updatedAt`
+    timestamps: true,
+  }
+);
 
 const Brand = model("Brand", brandSchema);
 

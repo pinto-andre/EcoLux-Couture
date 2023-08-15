@@ -1,0 +1,19 @@
+<div>
+    <h2>{{chosenClothing.name}} details</h2>
+    <section>
+        <div>
+            <img src="{{chosenClothing.image}}" alt="image logo">
+            <div>
+                <h4> Brand: {{chosenClothing.brand}}</h4>
+                <p> Sizes: {{chosenClothing.sizes}}</p>
+                <p> Type: {{chosenClothing.type}}</p>
+                <p> Gender: {{chosenClothing.gender}}</p>
+            </div>
+            <p> Description: {{chosenClothing.description}}</p>
+        </div>
+        <a href="/clothing/{{chosenClothing._id}}/edit">Update piece</a>
+        <form action="/clothing/{{chosenClothing._id}}/delete" method="post">
+            <button type="submit">Delete piece</button>
+        </form>
+    </section>
+</div>

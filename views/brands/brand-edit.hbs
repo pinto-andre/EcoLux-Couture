@@ -1,0 +1,26 @@
+<div>
+    <h2> Updating {{brand.title}}</h2>
+    <div id="brand-create">
+        <form action="/brands/{{brand._id}}/edit" method="post">
+        <label>Title:
+            <input type="text" name="title" value="{{brand.title}}"/>
+        </label>
+
+        <label> Ecological Rating:
+            <input type="number" name="ecoRating" value="{{brand.ecoRating}}" step="any"/>
+        </label>
+
+        <label>Description:
+            <textarea type="text"  name="description" cols="30" rows="4" >{{brand.description}}</textarea>
+        </label>
+
+        <label> Brand Link:
+            <input type="text" name="link" value="{{brand.link}}"/>
+        </label>
+
+        <button type="submit">Submit changes</button>
+        </form>
+    </div>
+    <a href="/">Homepage</a>
+
+</div>

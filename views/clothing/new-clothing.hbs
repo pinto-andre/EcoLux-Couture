@@ -1,0 +1,38 @@
+<div>
+    <h2>New clothing entry</h2>
+    <div id="clothing-create">
+        <form action="/clothing/create" method="post">
+        <label>Image:
+          <input type="file" name="clothing-image" class="form-control-file" />
+        </label>
+        <label> Name:
+            <input type="text" name="name" />
+        </label>
+        
+        <label> Brand:
+            <input type="text" name="brand"/>
+        </label>
+        
+        <div>
+            <label for="sizes">Choose the size</label>
+            <select name="sizes" id="sizes" multiple>
+            {{#each clothing}}
+            <option value=“{{sizes}}“>{{sizes}}</option>
+            {{/each}}
+            </select>
+        </div>
+        <label> Type:
+            <input type="text" name="type"/>
+        </label>
+
+        <label> Description:
+            <textarea name="description" cols="30" rows="4"> </textarea>
+        </label>
+
+        
+        <button type="submit"> Save new entry </button>
+        </form>
+    </div>
+    <a href="/clothing">Clothing List</a>
+    <a href="/">Home Page</a>
+</div>

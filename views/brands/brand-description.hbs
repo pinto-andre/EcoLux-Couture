@@ -1,0 +1,22 @@
+<div>
+    <h2>{{chosenBrand.title}} details</h2>
+    <section>
+        <div>
+            <img src="{{chosenBrand.image}}" alt="image logo">
+            <h4> Ecological Rating: {{chosenBrand.ecoRating}}</h4>
+            <p> Description: {{chosenBrand.description}}</p>
+        </div>
+        <div>
+            {{#each chosenBrand.clothes}}
+            <div>
+                <img src="{{this.image}}" alt="image logo">
+                <h4>{{this.name}}</h4>
+            </div>
+            {{/each}}
+        </div>
+        <a href="/brands/{{chosenBrand._id}}/edit">Update Brand</a>
+        <form action="/brands/{{chosenBrand._id}}/delete" method="post">
+            <button type="submit">Delete Brand</button>
+        </form>
+    </section>
+</div>
