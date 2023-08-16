@@ -12,6 +12,11 @@ body {
   flex-direction: column;
 }
 
+.main-div{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
 .title{
   margin-bottom: 0;
   padding-bottom: 0;
