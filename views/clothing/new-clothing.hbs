@@ -1,56 +1,54 @@
-<div>
-    <h2>New clothing entry</h2>
+<div class="main-div">
     <div id="clothing-create">
-        <form action="/clothing/create" method="post">
-        <label>Image:
-          <input type="file" name="clothing-image" class="form-control-file" />
-        </label>
-        <label> Name:
-            <input type="text" name="name" />
-        </label>
-        
-        <label> Brand:
-            <input type="text" name="brand"/>
-        </label>
-        
-        <div>
-            <label for="sizes">Choose the size</label>
-            <select name="sizes" id="sizes" multiple>
+        <h2>New clothing entry</h2>
+        <div class="creating-div">
+            <form action="/clothing/create" method="post">
+            <label>Image:
+            <input type="file" name="clothing-image" class="form-control-file" />
+            </label>
+            <label> Name:
+                <input type="text" name="name" />
+            </label>
             
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            
-            </select>
-        </div>
+            <label> Brand:
+                <input type="text" name="brand"/>
+            </label>
+            <div id="labels">
+                <div>
+                    <label for="sizes">Size</label>
+                    <select name="sizes" id="sizes" multiple>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
 
-        <div>
-            <label for="type">Type</label>
-            <select name="type" id="type" multiple>
-            
-            <option value="Tops">Tops</option>
-            <option value="Bottoms">Bottoms</option>
-            
-            </select>
-        </div>
+                <div>
+                    <label for="type">Type</label>
+                    <select name="type" id="type" multiple>
+                        <option value="Tops">Tops</option>
+                        <option value="Bottoms">Bottoms</option>
+                    </select>
+                </div>
 
-         <div>
-            <label for="gender">Gender</label>
-            <select name="gender" id="gender" multiple>
+                <div>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" multiple>
+                        <option value="Men">Men</option>
+                        <option value="Women">Women</option>
+                    </select>
+                </div>
+            </div>
             
-            <option value="Men">Men</option>
-            <option value="Women">Women</option>
+
+            <label> Description:
+                <textarea name="description" cols="30" rows="4"> </textarea>
+            </label>
             
-            </select>
-        </div>
-
-        <label> Description:
-            <textarea name="description" cols="30" rows="4"> </textarea>
-        </label>
-
-        
-        <button type="submit"> Save new entry </button>
+            <button type="submit"> Save new entry </button>
         </form>
+        </div>
+        
     </div>
     <a href="/clothing">Clothing List</a>
     <a href="/">Home Page</a>
