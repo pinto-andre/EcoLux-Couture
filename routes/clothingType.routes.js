@@ -14,6 +14,19 @@ router.get("/clothing", async (req, res) => {
     catch(error){console.log(error)}
 });
 
+/* GET clothing type list for men */
+router.get("/clothing/men", async (req, res) => {
+    let menClothes = [];
+    try{
+       let allClothing = await ClothingType.find();
+       if(allClothing.gender === 'men'){
+            menClothes.push(allClothing._id)
+       }
+    res.render("clothing/clothing-list-men", {menClothes}); 
+    }
+    catch(error){console.log(error)}
+});
+
 /* Create routes */
 //Get route to display create form
 router.get('/clothing/create', (req,res) => {
@@ -24,7 +37,8 @@ router.post('/clothing/create', async (req,res)=>{
     try{
         const {image, name, brand, sizes, type, gender, description} = req.body;
         await ClothingType.create({image, name, brand, sizes, type, gender, description})
-        res.redirect('/clothing-list');
+
+        res.redirect('/clothing');
     }
     catch(error){
         console.log(error)

@@ -1,0 +1,40 @@
+<div>
+    <h2>Updating {{chosenClothing.name}}</h2>
+    <div id="clothing-create">
+        <form action="/clothing/{{chosenClothing._id}}/edit" method="post">
+        <label>Image:
+          <input type="file" name="clothing-image" class="form-control-file" />
+        </label>
+        <label> Name:
+            <input type="text" name="name" value="{{chosenClothing.name}}"/>
+        </label>
+        
+        <label> Brand:
+            <input type="text" name="brand" value="{{chosenClothing.brand}}"/>
+        </label>
+        
+        <div>
+            <label for="sizes">Choose the size</label>
+            <select name="sizes" id="sizes" multiple>
+            
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            
+            </select>
+        </div>
+
+        <label> Type:
+            <input type="text" name="type" value="{{chosenClothing.type}}"/>
+        </label>
+
+        <label> Description:
+            <textarea name="description" cols="30" rows="4"> {{chosenClothing.description}} </textarea>
+        </label>
+        
+        <button type="submit"> Save new entry </button>
+        </form>
+    </div>
+    <a href="/clothing">Clothing List</a>
+    <a href="/">Home Page</a>
+</div>

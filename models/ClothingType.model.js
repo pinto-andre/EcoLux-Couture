@@ -4,21 +4,23 @@ const clothingTypeSchema = new Schema(
     {
     image: [String],
     name: {
-        type: String,
-        required: false,
-        trim: true,
+      type: String,
+      required: false,
+      trim: true,
     },
     brand: {
       type: String
     },
     sizes: {
-        enum: ['S', 'M', 'L']
+      enum: ['S', 'M', 'L']
     },
     type: {
-      enum: ['Dress', 'Shirt', 'Pants', 'Suit']
+      type: String,
+      enum: ['Tops', 'Bottoms']
     },
     gender: {
-        enum: ['Women', 'Men']
+      type: String,
+      enum: ['Women', 'Men']
     },
       description: {
         type: String,

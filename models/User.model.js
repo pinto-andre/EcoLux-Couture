@@ -26,8 +26,18 @@ const userSchema = new Schema(
     lastName: {
       type: String,
     },
-    favouriteBrand: [String],
-    favouriteClothing: [String],
+    favouriteBrand: [
+      { 
+        type: Schema.Types.ObjectId,
+        ref: 'Brand'
+      }
+    ],
+    favouriteClothing: [
+      { 
+        type: Schema.Types.ObjectId,
+        ref: 'ClothingType'
+      }
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

@@ -1,0 +1,15 @@
+<section>
+    <div>
+        <a href="/clothing/create">Create your brand!</a>
+    </div>
+    <div>
+        {{#each menClothes}}
+                <div>
+                    <img src="{{image}}" alt="{{name}}">
+                    <h2>
+                        <a href="/clothing/{{_id}}">{{name}}</a>
+                        </h2>
+                </div>
+        {{/each}}
+    </div>
+</section>

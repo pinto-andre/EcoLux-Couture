@@ -39,6 +39,9 @@ router.get('/brands/:brandId', async (req, res) => {
         let chosenBrand = await Brand.findById(brandId)
 
         await chosenBrand.populate('clothes')
+        console.log(chosenBrand)
+
+        
 
         res.render('brands/brand-description', {chosenBrand})
     }

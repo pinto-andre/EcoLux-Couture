@@ -1,8 +1,8 @@
+<br>
 {{#if user}}
 <div class="main-div">
-    <h1>{{user.username}} Profile Page </h1>
-    <br />
-    <h2>{{user.email}}</h2>
+    <h1>{{user.firstName}} {{user.lastName}} Profile Page </h1>
+    <h4>{{user.email}}</h4>
     <hr />
     <h2>Favorite brands</h2>
     {{#each favouriteBrands}}
@@ -12,6 +12,8 @@
             <button type="submit">Delete</button>
         </form>
     {{/each}}
+    <br>
+    <hr />
     <br>
     <h2>Favorite clothing</h2>
     {{#each favouriteClothing}}
