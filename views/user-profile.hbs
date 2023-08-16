@@ -1,3 +1,42 @@
+{{#if user}}
 <div class="main-div">
-    <h1>this is your profile</h1>
+    <h1>{{user.username}} Profile Page </h1>
+    <br />
+    <h2>{{user.email}}</h2>
+    <hr />
+    <h2>Favorite brands</h2>
+    {{#each favouriteBrands}}
+    <img src="{{this.image}}" alt="brand logo">
+    <p>{{this.title}}</p>
+        <form action="/leisureSpots/removeFavs/{{_id}}" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    {{/each}}
+    <br>
+    <h2>Favorite clothing</h2>
+    {{#each favouriteClothing}}
+    <img src="{{this.image}}" alt="clothing image">
+    <p>{{this.name}}</p>
+    <p>{{this.brand}}</p>
+        <form action="/fooddrinkSpots/removeFavs/{{_id}}" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    {{/each}}
+    <br>
+    {{#each favoriteCulture}}
+    <p>{{this.name}}</p>
+    <form action="/cultureSpots/removeFavs/{{_id}}" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    {{/each}}
+    <br>
+    <hr />
+    {{!-- <h2>Personal reviews</h2>
+    {{#each review}}
+    <p>{{content}}</p>
+    {{/each}}
+    <hr /> --}}
 </div>
+{{else}}
+<h2>Oops, looks like something went wrong, please make sure you're logged in. :) </h2>
+{{/if}}
