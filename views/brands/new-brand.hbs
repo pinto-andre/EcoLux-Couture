@@ -2,9 +2,9 @@
     <div id="brands-create">
         <h2>New Brand entry</h2>
         <div class="creating-div">
-            <form action="/brands/create" method="post">
+            <form action="/brands/create" method="post" enctype="multipart/form-data">
             <label>Image:
-            <input type="file" name="brand-logo-image" class="form-control-file" />
+            <input type="file" class="form-control-file" id="image" name="image" />
             </label>
             <label> Title:
                 <input type="text" name="title" />

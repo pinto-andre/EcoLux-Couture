@@ -3,7 +3,8 @@ const { Schema, model } = require("mongoose");
 const brandSchema = new Schema(
   {
   image: {
-      type: String
+      type: String,
+      trim: true,
   },
   title: {
       type: String,

@@ -14,11 +14,6 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-/* GET about page */
-/* router.get("/about", (req, res, next) => {
-  res.render("about");
-}); */
-
 router.get('/about', (req, res) => {
   const user = req.session.currentUser;
   let putLayout = '';

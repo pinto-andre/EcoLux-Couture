@@ -1,0 +1,9 @@
+{{#each favourites}}
+<img src="{{image}}" alt="">
+<h1>{{title}}</h1>
+<div class="row">
+        <form action="/favourite/removeFromFav/{{_id}}" method="post">
+          <button type="submit"><i class="bi bi-bookmark-star"></i></button>
+        </form>
+      </div>
+{{/each}}
