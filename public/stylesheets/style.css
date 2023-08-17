@@ -70,6 +70,32 @@ body {
   align-items: center;
   width: 100%;
 }
+#auth-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+
+#auth-nav a{
+  text-decoration: none;
+  color: rgb(67, 4, 4);
+}
+
+#auth-nav form{
+  padding: 0;
+  margin: 0;
+  color: rgb(67, 4, 4);
+}
+
+#auth-nav button{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: rgb(67, 4, 4);
+}
+
 
 .auth nav{
   display: flex;
@@ -110,4 +136,20 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+#brand-div img{
+  width: 350px;
+  height: 300px;
+}
+
+.product-list{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#brand-div{
+  padding: 15px;
 }

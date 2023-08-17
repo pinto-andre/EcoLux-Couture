@@ -1,15 +1,17 @@
-<section class="main-div">
-    <div>
-        <a href="/brands/create">Create your brand!</a>
-    </div>
-    <div>
-        {{#each brand}}
+<section class = "main-div">
+    <div class="listing">
         <div>
-            <img src="{{image}}" alt="{{title}} logo">
-            <h2>
-                <a href="/brands/{{_id}}">{{title}}</a>
-                </h2>
+            <a href="/brands/create">Create your brand!</a>
         </div>
-        {{/each}}
-    </div>
+        <div class="product-list">
+            {{#each brand}}
+            <div id="brand-div">
+                <img src="{{image}}" alt="{{title}} logo">
+                <h2>
+                    <a href="/brands/{{_id}}">{{title}}</a>
+                </h2>
+            </div>
+            {{/each}}
+        </div>
+    </div>  
 </section>

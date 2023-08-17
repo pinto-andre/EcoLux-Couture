@@ -13,7 +13,7 @@ router.get('/profile', isLoggedIn, async (req, res) => {
     let profileInfo = await User.findById(user._id)
         .populate('favouriteBrand')
         .populate('favouriteClothing')
-        res.render('user-profile',  {user, profileInfo})
+        res.render('user-profile',  {user, profileInfo, layout: "login-layout.hbs"})
     }
     catch(error){console.log(error)}
 })
