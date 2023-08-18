@@ -295,3 +295,30 @@ body {
   padding: 10px;
   background-color: rgba(255,255,255,0.4);
 }
+
+.authforms{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: solid 2px rgb(67, 4, 4);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.4);
+  font-weight: bold;
+}
+
+.authforms div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.authforms button{
+  border: solid 2px rgb(67, 4, 4);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.4);
+  font-weight: bold;
+}

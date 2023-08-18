@@ -1,6 +1,9 @@
+<br>
+<br>
+<div class="main-div">
 <div id="form">
   <h2>Sign Up</h2>
-  <form action="/signup" method="POST">
+  <form class="authforms" action="/signup" method="POST">
 
   
 
@@ -24,7 +27,10 @@
       <input type="text" name="lastName" placeholder="Your last name" />
     </label>
     
-    <button type="submit">Sign Up</button>
+    <div>
+      <button type="submit">Sign Up</button>
+    </div>
+    
 
 <hr>
 <p>Already have an account? <a href="/login">Log in</a></p>
@@ -33,4 +39,5 @@
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
+</div>
 </div>
