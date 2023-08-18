@@ -52,7 +52,14 @@ router.get('/about', (req, res) => {
 /* Create routes */
 //Get route to display create form
 router.get('/brands/create', (req,res) => {
-    res.render('brands/new-brand.hbs')
+  const user = req.session.currentUser;
+  let putLayout = '';
+  if (user) {
+    putLayout = 'login-layout.hbs';
+  } else {
+    putLayout = 'layout.hbs';
+  }
+    res.render('brands/new-brand.hbs', {layout: putLayout})
 })
 //Pos route to retrieve user filled info for creation
 router.post('/brands/create', uploader.single('image'), async (req,res)=>{
@@ -79,8 +86,13 @@ router.get('/brands/:brandId', async (req, res) => {
           isFav = true;
       }
       let chosenBrand = await Brand.findById(brandId);
-      
-      res.render('brands/brand-description', {chosenBrand})
+      let putLayout = '';
+      if (user) {
+        putLayout = 'login-layout.hbs';
+      } else {
+        putLayout = 'layout.hbs';
+      }
+      res.render('brands/brand-description', {chosenBrand, layout: putLayout})
 
     }
     catch(error){

@@ -1,10 +1,10 @@
-<div>
+<br>
+<br>
+<div class="main-div">
     <h2>Updating {{chosenClothing.name}}</h2>
     <div id="clothing-create">
         <form action="/clothing/{{chosenClothing._id}}/edit" method="post">
-        <label>Image:
-          <input type="file" name="clothing-image" class="form-control-file" />
-        </label>
+        
         <label> Name:
             <input type="text" name="name" value="{{chosenClothing.name}}"/>
         </label>

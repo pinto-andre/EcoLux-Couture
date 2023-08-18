@@ -11,7 +11,15 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  res.render("index");
+  const user = req.session.currentUser;
+  let putLayout = '';
+  if (user) {
+    putLayout = 'login-layout.hbs';
+  } else {
+    putLayout = 'layout.hbs';
+  }
+
+  res.render("index", {layout: putLayout});
 });
 
 router.get('/about', (req, res) => {
@@ -30,12 +38,37 @@ router.get('/about', (req, res) => {
 
 /* GET contact page */
 router.get("/contact", (req, res, next) => {
-  res.render("contact");
+  const user = req.session.currentUser;
+  let putLayout = '';
+  if (user) {
+    putLayout = 'login-layout.hbs';
+  } else {
+    putLayout = 'layout.hbs';
+  }
+  res.render("contact", {
+    userInSession: req.session.currentUser,
+    layout: putLayout,});
 });
 
 /* GET get involved page */
 router.get("/involved", (req, res, next) => {
-  res.render("get-involved");
+  const user = req.session.currentUser;
+  let putLayout = '';
+  if (user) {
+    putLayout = 'login-layout.hbs';
+  } else {
+    putLayout = 'layout.hbs';
+  }
+
+  let renderPage = '';
+  if (user) {
+    renderPage = 'get-involved.hbs';
+  } else {
+    renderPage = 'needs-login.hbs';
+  }
+  
+  
+  res.render(renderPage, {layout: putLayout});
 });
 
 /* User profile route */

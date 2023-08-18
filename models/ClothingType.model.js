@@ -2,7 +2,10 @@ const { Schema, model } = require("mongoose");
 
 const clothingTypeSchema = new Schema(
     {
-    image: [String],
+    image: {
+      type: String,
+      trim: true,
+  },
     name: {
       type: String,
       required: false,

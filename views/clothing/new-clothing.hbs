@@ -1,10 +1,12 @@
+<br>
+<br>
 <div class="main-div">
     <div id="clothing-create">
         <h2>New clothing entry</h2>
         <div class="creating-div">
-            <form action="/clothing/create" method="post">
+            <form action="/clothing/create" method="post" enctype="multipart/form-data">
             <label>Image:
-            <input type="file" name="clothing-image" class="form-control-file" />
+            <input type="file" name="image" class="form-control-file" />
             </label>
             <label> Name:
                 <input type="text" name="name" />

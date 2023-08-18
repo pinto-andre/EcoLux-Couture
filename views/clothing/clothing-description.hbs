@@ -10,6 +10,18 @@
                 <p> Gender: {{chosenClothing.gender}}</p>
             </div>
             <p> Description: {{chosenClothing.description}}</p>
+            {{!-- {{#if isFav}}
+                <form action="/favourite/remove/{{chosenClothing._id}}" method="post">
+                    <button type="submit"><i class="bi bi-bookmark-star-fill">Remove from favourites
+                        </i></button>
+                </form>
+            {{else}}
+                <form action="/favourite/add/{{chosenClothing._id}}" method="post">
+                    <button type="submit"><i
+                            class="bi bi-bookmark-star"
+                        >Add to favourites</i></button>
+                </form>
+            {{/if}} --}}
         </div>
         <a href="/clothing/{{chosenClothing._id}}/edit">Update piece</a>
         <form action="/clothing/{{chosenClothing._id}}/delete" method="post">

@@ -1,15 +1,23 @@
+<br>
 <section class = "main-div">
     <div class="listing">
-        <div>
-            <a href="/brands/create">Create your brand!</a>
+        <br>
+        <div class="creator">
+            <a class="createYourBrand" href="/brands/create">Create your brand!</a>
         </div>
+        <br>
+        <hr>
+        <h5>Below you'll find a list of selected brands, which are specifically analysed to meet your eco-fashion needs.</h5>
+        <hr>
         <div class="product-list">
             {{#each brand}}
             <div id="brand-div">
                 <img src="{{image}}" alt="{{title}} logo">
+                <br>
                 <h2>
-                    <a href="/brands/{{_id}}">{{title}}</a>
+                  <a href="/brands/{{_id}}">{{title}}</a>
                 </h2>
+                <br>
             </div>
             {{/each}}
         </div>

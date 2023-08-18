@@ -8,13 +8,16 @@
             {{#if isFav}}
                 <form action="/favourite/remove/{{chosenBrand._id}}" method="post">
                     <button type="submit"><i class="bi bi-bookmark-star-fill">
+                        Fav
                         </i></button>
                 </form>
             {{else}}
                 <form action="/favourite/add/{{chosenBrand._id}}" method="post">
                     <button type="submit"><i
                             class="bi bi-bookmark-star"
-                        ></i></button>
+                        >
+                        Fav
+                        </i></button>
                 </form>
             {{/if}}
         </div>

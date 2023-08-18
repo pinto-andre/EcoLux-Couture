@@ -4,35 +4,11 @@
     <h1>{{user.firstName}} {{user.lastName}} Profile Page </h1>
     <h4>{{user.email}}</h4>
     <hr />
-    <h2>Favorite brands</h2>
-    {{#each favouriteBrands}}
-    <img src="{{this.image}}" alt="brand logo">
-    <p>{{this.title}}</p>
-        <form action="/leisureSpots/removeFavs/{{_id}}" method="post">
-            <button type="submit">Delete</button>
-        </form>
-    {{/each}}
-    <br>
+    <h3><a href="/myFavouriteBrands">Favorite brands</a></h3>
     <hr />
+    {{!-- <h3>Favorite clothing</h3>
     <br>
-    <h2>Favorite clothing</h2>
-    {{#each favouriteClothing}}
-    <img src="{{this.image}}" alt="clothing image">
-    <p>{{this.name}}</p>
-    <p>{{this.brand}}</p>
-        <form action="/fooddrinkSpots/removeFavs/{{_id}}" method="post">
-            <button type="submit">Delete</button>
-        </form>
-    {{/each}}
-    <br>
-    {{#each favoriteCulture}}
-    <p>{{this.name}}</p>
-    <form action="/cultureSpots/removeFavs/{{_id}}" method="post">
-        <button type="submit">Delete</button>
-    </form>
-    {{/each}}
-    <br>
-    <hr />
+    <hr /> --}}
     {{!-- <h2>Personal reviews</h2>
     {{#each review}}
     <p>{{content}}</p>

@@ -1,9 +1,26 @@
+<section class = "main-div">
+   <div class="product-list">
 {{#each favourites}}
+<div id="brand-div">
 <img src="{{image}}" alt="">
 <h1>{{title}}</h1>
 <div class="row">
         <form action="/favourite/removeFromFav/{{_id}}" method="post">
-          <button type="submit"><i class="bi bi-bookmark-star"></i></button>
-        </form>
+  <button type="submit" class="bigger-button">Remove from brand favourites<i class="bi bi-bookmark-star"></i></button>
+</form>
+
+
       </div>
+    </div>
 {{/each}}
+</div>
+</section>
+
+<style>
+  .bigger-button {
+    border: solid 2px rgb(67, 4, 4);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.4);
+  }
+</style>

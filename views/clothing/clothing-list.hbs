@@ -1,14 +1,16 @@
+<br>
 <section>
-    <div>
-        <a href="/clothing/create">Create your clothing piece!</a>
-    </div>
-    <div>
+    <br>
+    <hr>
+    <h5>Below you'll find a list of all clothes that belong to our curated brands and present in or data-base. If you which to see the details, please <a href="/login">log in</a></h5>
+    <hr>
+    <div class="product-list">
         {{#each clothing}}
-        <div>
+        <div  id="brand-div" class="clothesimg">
             <img src="{{image}}" alt="{{name}}">
-            <h2>
-                <a href="/clothing/{{_id}}">{{name}}</a>
-                </h2>
+            <h5>
+                {{name}}
+            </h5>
         </div>
         {{/each}}
     </div>
